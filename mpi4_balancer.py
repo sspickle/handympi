@@ -174,9 +174,6 @@ class MPIBalancer(object):
             self.slave()
             self.work.slaveAfterWork()
 
-        if finalRun:
-            sys.exit()
-
 class MPIDemoWork(MPIWork):
     """Example PyparWork implementation"""
     def __init__(self):
