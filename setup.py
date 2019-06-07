@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='handympi',
-      version='0.2',
+      version='0.22',
       description='A simple framework for easy mpi',
       url='http://github.com/sspickle/handympi',
       author='Steve Spicklemire',
