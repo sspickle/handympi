@@ -16,7 +16,7 @@ try:
     HAVE_MPI=1
     MY_RANK=comm.Get_rank()
     
-    from mpi4_balancer import MPIWork, MPIBalancer
+    from .mpi4_balancer import MPIWork, MPIBalancer
     
     if comm.Get_size() > 1:
         HAVE_MPI=1  # we have mpi4py, and we're running with more than one node
