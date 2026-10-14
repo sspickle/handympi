@@ -1,0 +1,27 @@
+[project]
+name = "handympi"
+version = "0.23"
+description = "A simple framework for easy mpi"
+readme = "README.md"
+license = "MIT"
+authors = [{ name = "Steve Spicklemire", email = "steve@spvi.com" }]
+requires-python = ">=3.10"
+dependencies = [
+    "mpi4py",
+    "numpy",
+]
+
+[project.urls]
+Homepage = "https://github.com/sspickle/handympi"
+
+[dependency-groups]
+dev = ["pytest"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+# Build mpi4py from source against the MPI found on each machine (via mpicc),
+# so every node uses the same MPI as the mpirun that launches it.
+no-binary-package = ["mpi4py"]
